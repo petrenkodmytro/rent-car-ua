@@ -1,13 +1,39 @@
 {
   "files": {
-    "main.css": "/rent-car-ua/static/css/main.073c9b0a.css",
-    "main.js": "/rent-car-ua/static/js/main.deac794a.js",
+    "main.css": "/rent-car-ua/static/css/main.22fdd39e.css",
+    "main.js": "/rent-car-ua/static/js/main.01b8165e.js",
+    "static/js/244.a411fa89.chunk.js": "/rent-car-ua/static/js/244.a411fa89.chunk.js",
+    "static/js/584.b3349b2d.chunk.js": "/rent-car-ua/static/js/584.b3349b2d.chunk.js",
+    "static/js/395.4bca7950.chunk.js": "/rent-car-ua/static/js/395.4bca7950.chunk.js",
+    "static/js/76.56d98ac2.chunk.js": "/rent-car-ua/static/js/76.56d98ac2.chunk.js",
+    "static/media/newCars.jpg": "/rent-car-ua/static/media/newCars.e0c3df4807d66f42972e.jpg",
+    "static/media/boosters.jpg": "/rent-car-ua/static/media/boosters.163dbb56f861533902d7.jpg",
+    "static/media/transfer.jpg": "/rent-car-ua/static/media/transfer.29f476c6bdb00bc592f1.jpg",
+    "static/media/office-krivoy-rog.jpg": "/rent-car-ua/static/media/office-krivoy-rog.f3d9813ef4082120de27.jpg",
+    "static/media/home-cars.jpg": "/rent-car-ua/static/media/home-cars.8e226207cbd8d7bbfe83.jpg",
+    "static/media/office-dnipro.jpg": "/rent-car-ua/static/media/office-dnipro.633923ddf902852a3d2e.jpg",
+    "static/media/office-kharkiv.jpg": "/rent-car-ua/static/media/office-kharkiv.b9bfe041e0f0581eef14.jpg",
+    "static/media/office-lviv.jpg": "/rent-car-ua/static/media/office-lviv.9395306c6a43e29d2279.jpg",
+    "static/media/logo.jpg": "/rent-car-ua/static/media/logo.fdcc00a1151bc57bb20a.jpg",
+    "static/media/office-khmelnitzky.jpg": "/rent-car-ua/static/media/office-khmelnitzky.41d12f3d42d0804796ac.jpg",
+    "static/media/office-cherkasy.jpg": "/rent-car-ua/static/media/office-cherkasy.c3c787e4cc9577dddc00.jpg",
+    "static/media/office-chernigov.jpg": "/rent-car-ua/static/media/office-chernigov.b9b1ee44311f3a92fd9b.jpg",
+    "static/media/office-vinnitsa.jpg": "/rent-car-ua/static/media/office-vinnitsa.9805de2ae4db377eef6f.jpg",
+    "static/media/office-zaporozhye.jpg": "/rent-car-ua/static/media/office-zaporozhye.5abda7be37f8bc04c2e6.jpg",
+    "static/media/office-odessa.jpg": "/rent-car-ua/static/media/office-odessa.2206d96bb5136cdad824.jpg",
+    "static/media/office-ternopol.jpg": "/rent-car-ua/static/media/office-ternopol.2d918900e450f9bf9ba8.jpg",
+    "static/media/office-kiev.jpg": "/rent-car-ua/static/media/office-kiev.d52ee0d97c00af78fa95.jpg",
+    "static/media/icons.svg": "/rent-car-ua/static/media/icons.9ded8b48f5820c59944791fbac2235f5.svg",
     "index.html": "/rent-car-ua/index.html",
-    "main.073c9b0a.css.map": "/rent-car-ua/static/css/main.073c9b0a.css.map",
-    "main.deac794a.js.map": "/rent-car-ua/static/js/main.deac794a.js.map"
+    "main.22fdd39e.css.map": "/rent-car-ua/static/css/main.22fdd39e.css.map",
+    "main.01b8165e.js.map": "/rent-car-ua/static/js/main.01b8165e.js.map",
+    "244.a411fa89.chunk.js.map": "/rent-car-ua/static/js/244.a411fa89.chunk.js.map",
+    "584.b3349b2d.chunk.js.map": "/rent-car-ua/static/js/584.b3349b2d.chunk.js.map",
+    "395.4bca7950.chunk.js.map": "/rent-car-ua/static/js/395.4bca7950.chunk.js.map",
+    "76.56d98ac2.chunk.js.map": "/rent-car-ua/static/js/76.56d98ac2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.deac794a.js"
+    "static/css/main.22fdd39e.css",
+    "static/js/main.01b8165e.js"
   ]
 }
