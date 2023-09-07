@@ -64,29 +64,19 @@ const CarItem = ({ item }) => {
 
           <InfoWrap>
             <p>
-              <span>
-                {address.split(',')[1] ?? 'Unknown'}
-                <Delimeter>|</Delimeter>
-              </span>
-              <span>
-                {address.split(',')[2] ?? 'Unknown'}
-                <Delimeter>|</Delimeter>
-              </span>
+              <span>{address.split(',')[1] ?? 'Unknown'}</span>
+              <Delimeter>|</Delimeter>
+              <span>{address.split(',')[2] ?? 'Unknown'}</span>{' '}
+              <Delimeter>|</Delimeter>
               <span>{rentalCompany ?? 'Unknown'}</span>
             </p>
             <p>
-              <span>
-                {type ?? 'Unknown'}
-                <Delimeter>|</Delimeter>
-              </span>
-              <span>
-                {make ?? 'Unknown'}
-                <Delimeter>|</Delimeter>
-              </span>
-              <span>
-                {mileage ?? 'Unknown'}
-                <Delimeter>|</Delimeter>
-              </span>
+              <span>{type ?? 'Unknown'}</span>
+              <Delimeter>|</Delimeter>
+              <span>{make ?? 'Unknown'}</span>
+              <Delimeter>|</Delimeter>
+              <span>{mileage ?? 'Unknown'}</span>
+              <Delimeter>|</Delimeter>
               <span>{accessories[0] ?? 'Unknown'}</span>
             </p>
           </InfoWrap>

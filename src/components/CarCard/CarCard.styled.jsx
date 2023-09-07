@@ -20,18 +20,23 @@ export const Title = styled.p`
   font-weight: 500;
   line-height: 1.5;
 `;
+
 export const Year = styled.span`
   padding-left: 3px;
-`;
-
-export const Price = styled.span`
-  display: inline-block;
-  margin-left: auto;
 `;
 
 export const Model = styled.span`
   padding-left: 3px;
   color: ${p => p.theme.colors.accentLight};
+`;
+
+export const Descriprion = styled.p`
+  color: ${p => p.theme.colors.mainColor};
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.43;
+  margin-bottom: 24px;
 `;
 
 export const InfoWrap = styled.div`
@@ -40,14 +45,48 @@ export const InfoWrap = styled.div`
   gap: 4px;
 `;
 
-export const ImgWrap = styled.div`
-  height: 268px;
-  border-radius: 12px;
-  overflow: hidden;
+export const InfoList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+export const InfoTitle = styled.p`
+  color: ${p => p.theme.colors.mainColor};
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.43;
+`;
+
+export const RentalList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+
+  & > li {
+    padding: 7px 14px;
+    border-radius: 35px;
+    background: ${p => p.theme.colors.bgc};
+    color: ${p => p.theme.colors.thirdColor};
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    & > span {
+      color: ${p => p.theme.colors.accentLight};
+      font-family: Montserrat;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: -0.24px;
+    }
+  }
 `;
 
 export const ImgCar = styled.img`
-  height: 100%;
+  width: 461px;
+  height: 248px;
+  border-radius: 14px;
   object-fit: cover;
 `;
 
@@ -57,11 +96,11 @@ export const Delimeter = styled.span`
 `;
 
 export const LinkOrder = styled.a`
-  display: flex;
-  margin-top: auto;
-  padding: 12px 99px;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
+  margin-top: 24px;
+  padding: 12px 50px;
+  /* justify-content: center; */
+  /* align-items: center; */
   border-radius: 12px;
   border: none;
   background-color: ${p => p.theme.colors.accentLight};

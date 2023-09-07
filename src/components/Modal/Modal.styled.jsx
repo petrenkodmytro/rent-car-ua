@@ -12,9 +12,11 @@ export const Overlay = styled.div`
   background-color: ${p => p.theme.colors.secondColor};
   backdrop-filter: blur(3px);
   z-index: 1200;
+  overflow-x: hidden;
 `;
 
 export const ModalDiv = styled.div`
+overflow: auto;
   width: 541px;
   padding: 40px;
   position: absolute;
