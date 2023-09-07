@@ -5,7 +5,6 @@ import {
   ImgDescription,
   ItemDescription,
   ListDescription,
-  OddNumbered,
   TextDescription,
   TitleDescription,
   WrappInfo,
