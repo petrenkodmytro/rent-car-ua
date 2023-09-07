@@ -21,6 +21,7 @@ export const NavBar = styled.aside`
 export const StyledNavLink = styled(NavLink)`
   width: 110px;
   text-align: center;
+  font-size: 16px;
   font-weight: 500;
   display: flex;
   justify-content: start;
@@ -31,7 +32,7 @@ export const StyledNavLink = styled(NavLink)`
   /* margin-bottom: 10px; */
   margin-left: 0;
   margin-right: 0;
-  border-radius: 5px;
+  border-radius: 12px;
   border: none;
   text-decoration: none;
   color: ${p => p.theme.colors.mainColor};
