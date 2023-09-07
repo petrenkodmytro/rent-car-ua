@@ -2,11 +2,14 @@ import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
 
 export const GlobalStyle = createGlobalStyle`
+
+
 html {
   height: 100%;
   box-sizing: border-box;
   width: 100vw;
   overflow-x: hidden;
+  background-color: ${p => p.theme.colors.bgc};
 }
 
 *,
@@ -18,10 +21,9 @@ html {
 body {
   height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: 'Manrope', sans-serif;
   color: ${p => p.theme.colors.mainColor};
-  background-color: ${p => p.theme.colors.whiteColor};
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

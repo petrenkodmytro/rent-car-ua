@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CardWrap = styled.div`
-position: relative;
+  position: relative;
   width: 274px;
   height: 426px;
   display: flex;
@@ -106,4 +106,13 @@ export const FavoritesBtn = styled.button`
   &:focus {
     color: ${p => p.theme.colors.accentDark};
   }
+`;
+
+export const FavoriteIconFalse = styled.svg`
+  stroke: currentColor;
+  fill: none;
+`;
+export const FavoriteIconTrue = styled.svg`
+  stroke: ${p => p.theme.colors.accentDark};
+  fill: ${p => p.theme.colors.accentDark};
 `;

@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   display: flex;
   margin-left: auto;
   margin-right: auto;
+  background-color: ${p => p.theme.colors.whiteColor};
 `;
 
 export const Main = styled.main`

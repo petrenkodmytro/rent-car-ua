@@ -4,6 +4,8 @@ import {
   CarInfo,
   CardWrap,
   Delimeter,
+  FavoriteIconFalse,
+  FavoriteIconTrue,
   FavoritesBtn,
   ImgCar,
   ImgWrap,
@@ -14,10 +16,27 @@ import {
   Year,
 } from './CarItem.styled';
 import Modal from 'components/Modal/Modal';
-import { Icon } from 'components/Modal/Modal.styled';
 import icon from '../../images/icons.svg';
+import { useDispatch, useSelector } from 'react-redux';
+import { favorite } from 'redux/selectors';
+import { addFavoriteCar, deleteFavoriteCar } from 'redux/favoritSlice';
 
 const CarItem = ({ item }) => {
+  const dispatch = useDispatch();
+  const favoriteList = useSelector(favorite);
+  const isFavorite = favoriteList?.some(
+    favoriteCar => favoriteCar?.id === item.id
+  );
+  console.log(isFavorite);
+
+  const addFavorite = () => {
+    dispatch(addFavoriteCar(item));
+  };
+
+  const removeFavorite = () => {
+    dispatch(deleteFavoriteCar(item));
+  };
+
   const {
     img,
     make,
@@ -48,10 +67,15 @@ const CarItem = ({ item }) => {
         </ImgWrap>
 
         <CarInfo>
-          <FavoritesBtn type="button">
-            <Icon width={18} height={18}>
-              <use href={icon + '#icon-normal'}></use>
-            </Icon>
+          <FavoritesBtn
+            onClick={isFavorite ? removeFavorite : addFavorite}
+            type="button"
+          >{isFavorite ? <FavoriteIconTrue width={18} height={18}>
+          <use href={icon + '#icon-normal'}></use>
+        </FavoriteIconTrue> : <FavoriteIconFalse width={18} height={18}>
+          <use href={icon + '#icon-normal'}></use>
+        </FavoriteIconFalse>}
+            
           </FavoritesBtn>
           <Title>
             {make ?? 'Unknown'}
