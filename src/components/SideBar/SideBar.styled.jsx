@@ -6,7 +6,7 @@ export const NavWrapper = styled.nav`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 `;
 
 export const NavBar = styled.aside`
@@ -19,7 +19,7 @@ export const NavBar = styled.aside`
 `;
 
 export const StyledNavLink = styled(NavLink)`
-  width: 110px;
+  width: 120px;
   text-align: center;
   font-size: 16px;
   font-weight: 500;

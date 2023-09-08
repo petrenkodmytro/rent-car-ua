@@ -27,7 +27,6 @@ const CarItem = ({ item }) => {
   const isFavorite = favoriteList?.some(
     favoriteCar => favoriteCar?.id === item.id
   );
-  console.log(isFavorite);
 
   const addFavorite = () => {
     dispatch(addFavoriteCar(item));

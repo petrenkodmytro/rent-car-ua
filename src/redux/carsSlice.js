@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchCars } from './operations';
+import { fetchCarsPagination } from './operations';
 
 const initialState = {
   items: [],
@@ -18,7 +18,7 @@ const rejectedReduser = (state, action) => {
 const fetchCarsFulfilledReduser = (state, action) => {
   state.isLoading = false;
   state.error = null;
-  state.items = action.payload;
+  state.items = [...state.items, ...action.payload];
 };
 // const addContactFulfilledReduser = (state, action) => {
 //   state.isLoading = false;
@@ -42,9 +42,9 @@ const carsSlice = createSlice({
   // функціональна форма
   extraReducers: builder =>
     builder
-      .addCase(fetchCars.pending, pendingReduser)
-      .addCase(fetchCars.fulfilled, fetchCarsFulfilledReduser)
-      .addCase(fetchCars.rejected, rejectedReduser),
+      .addCase(fetchCarsPagination.pending, pendingReduser)
+      .addCase(fetchCarsPagination.fulfilled, fetchCarsFulfilledReduser)
+      .addCase(fetchCarsPagination.rejected, rejectedReduser),
   //   .addCase(addContact.pending, pendingReduser)
   //   .addCase(addContact.fulfilled, addContactFulfilledReduser)
   //   .addCase(addContact.rejected, rejectedReduser)

@@ -1,6 +1,6 @@
 import React from 'react';
 import { img } from '../../images';
-import { List, ListItem, Office } from './ContactList.styled';
+import { List, ListInfo, ListItem, Office } from './ContactList.styled';
 
 const offices = [
   'cherkasy',
@@ -27,7 +27,7 @@ const ContactList = () => {
             <p>
               <Office>{office}</Office>, office
             </p>
-            <ul>
+            <ListInfo>
               <li>
                 <span>Phone:</span>
                 <a href="tel:+380730000000">+380730000000</a>
@@ -42,7 +42,7 @@ const ContactList = () => {
                   order@autoprokat.net.ua
                 </a>
               </li>
-            </ul>
+            </ListInfo>
             <p>A car rental service works 24/7 according to your tariff!</p>
           </div>
         </ListItem>

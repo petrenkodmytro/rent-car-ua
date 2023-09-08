@@ -4,7 +4,7 @@ import React from 'react';
 const Contacts = () => {
   return (
     <section>
-      <h2>Contacts</h2>
+      <h2 style={{ marginTop: '20px' }}>Contacts</h2>
       <ContactList />
     </section>
   );

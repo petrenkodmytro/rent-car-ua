@@ -15,6 +15,25 @@ export const fetchCars = createAsyncThunk(
   }
 );
 
+export const fetchCarsPagination = createAsyncThunk(
+  'cars/fetchAll',
+  async (pageNumber, thunkAPI) => {
+    const options = {
+      params: {
+        page: pageNumber,
+        limit: 8,
+      },
+    };
+    try {
+      const response = await axios.get('/adverts', options);
+      console.log(response.data);
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
 // export const addContact = createAsyncThunk(
 //   'contacts/addContact',
 //   async (contact, thunkAPI) => {

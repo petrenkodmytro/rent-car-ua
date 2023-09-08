@@ -22,7 +22,7 @@ const theme = {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter basename="rent-car-ua">
         <ThemeProvider theme={theme}>
@@ -30,5 +30,5 @@ root.render(
         </ThemeProvider>
       </BrowserRouter>
     </Provider>
-  </React.StrictMode>
+  // </React.StrictMode>
 );

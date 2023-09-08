@@ -28,7 +28,9 @@ const favoritConfig = {
 
 export const store = configureStore({
   reducer: {
-    cars: persistReducer(carsConfig, carsReducer),
+    // cars: persistReducer(carsConfig, carsReducer),
+    cars: carsReducer,
+
     favorite: persistReducer(favoritConfig, favoritSlice.reducer),
 
     // filter: filterReducer,
