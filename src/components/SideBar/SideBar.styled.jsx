@@ -7,10 +7,12 @@ export const NavWrapper = styled.nav`
   justify-content: space-around;
   align-items: center;
   gap: 20px;
+  
 `;
 
 export const NavBar = styled.aside`
   display: flex;
+  /* flex-grow: 1; */
   flex-direction: column;
   justify-content: space-between;
   align-items: center;

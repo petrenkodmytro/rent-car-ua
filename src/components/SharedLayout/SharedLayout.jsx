@@ -6,8 +6,7 @@ import ScrollToTop from 'react-scroll-to-top';
 import { Loading } from 'notiflix';
 import { useSelector } from 'react-redux';
 import { selectIsLoading } from 'redux/selectors';
-
-
+import { ToastContainer } from 'react-toastify';
 
 export const SharedLayout = () => {
   const isLoading = useSelector(selectIsLoading);
@@ -20,6 +19,7 @@ export const SharedLayout = () => {
         </Suspense>
       </Main>
       <ScrollToTop color="#3E85F3" smooth="true" />
+      <ToastContainer />
     </Wrapper>
   );
 };

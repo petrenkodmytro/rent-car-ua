@@ -11,6 +11,10 @@ export const Wrapper = styled.div`
 
 export const Main = styled.main`
   /* flex: 1 1 auto; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
   padding-left: 15px;
   padding-right: 15px;
 `;

@@ -1,10 +1,27 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
-import { selectCars } from 'redux/selectors';
-import { Input, Label } from './Filter.styled';
+import {
+  BtnForm,
+  Form,
+  Input,
+  Label,
+  MileageInputFrom,
+  MileageInputTo,
+  MileageWrap,
+} from './Filter.styled';
+import { toast } from 'react-toastify';
 
-const Filter = () => {
-  const cars = useSelector(selectCars);
+const optionsToast = {
+  position: 'top-center',
+  autoClose: 5000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: 'dark',
+};
+
+const Filter = ({ cars, setFilteredCars }) => {
   const carsMakeArr = cars.map(car => car.make);
   const maxPrice = Math.max(
     ...cars
@@ -19,10 +36,55 @@ const Filter = () => {
 
   const [make, setMake] = useState('');
   const [price, setPrice] = useState('');
-//   console.log(price);
+  const [mileageFrom, setMileageFrom] = useState('');
+  const [mileageTo, setMileageTo] = useState('');
+
+  const search = e => {
+    let filterCars = [...cars];
+
+    if (make === '' && price === '' && mileageFrom === '' && mileageTo === '') {
+      toast.info('Please set params for search ', optionsToast);
+      setFilteredCars([]);
+      return;
+    }
+
+    if (make !== '') {
+      filterCars = filterCars.filter(
+        car => car.make.toLowerCase() === make.toLowerCase()
+      );
+    }
+    if (price !== '') {
+      filterCars = filterCars.filter(
+        car => Number(car.rentalPrice.slice(1)) <= Number(price)
+      );
+    }
+    if (mileageFrom !== '') {
+      filterCars = filterCars.filter(
+        car => Number(car.mileage) >= Number(mileageFrom)
+      );
+    }
+    if (mileageTo !== '') {
+      filterCars = filterCars.filter(
+        car => Number(car.mileage) <= Number(mileageTo)
+      );
+    }
+
+    if (filterCars.length === 0) {
+      toast.info('No results for these search params', optionsToast);
+    }
+    setFilteredCars(filterCars);
+  };
+
+  const reset = () => {
+    setFilteredCars([]);
+    setMake('');
+    setPrice('');
+    setMileageFrom('');
+    setMileageTo('');
+  };
+
   return (
-    <form>
-      <p>Model: {make}</p>
+    <Form>
       <Label htmlFor="make">
         Car brand
         <Input
@@ -39,10 +101,10 @@ const Filter = () => {
         ))}
       </datalist>
 
-      <p>Price/ 1 hour {price}</p>
       <Label htmlFor="price">
         Price/ 1 hour
         <Input
+          style={{ width: '125px' }}
           id="price"
           type="text"
           list="data"
@@ -55,7 +117,32 @@ const Filter = () => {
           <option key={key} value={item} />
         ))}
       </datalist>
-    </form>
+      <MileageWrap>
+        <Label htmlFor="mileageFrom">
+          Сar mileage / km
+          <MileageInputFrom
+            value={mileageFrom}
+            id="mileageFrom"
+            type="text"
+            onChange={event => setMileageFrom(event.target.value)}
+            placeholder="From"
+          />{' '}
+        </Label>
+        <MileageInputTo
+          value={mileageTo}
+          type="text"
+          onChange={event => setMileageTo(event.target.value)}
+          placeholder="To"
+        />
+      </MileageWrap>
+
+      <BtnForm type="button" onClick={search}>
+        Search
+      </BtnForm>
+      <BtnForm type="button" onClick={reset}>
+        Reset
+      </BtnForm>
+    </Form>
   );
 };
 

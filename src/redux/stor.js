@@ -13,14 +13,9 @@ import {
 import storage from 'redux-persist/lib/storage';
 import { carsReducer } from './carsSlice';
 import { favoritSlice } from './favoritSlice';
-
 // import { filterReducer } from './filterSlice';
 
 // налаштування для redux-persist (localStorage)
-const carsConfig = {
-  key: 'cars',
-  storage,
-};
 const favoritConfig = {
   key: 'favorite',
   storage,
@@ -28,11 +23,8 @@ const favoritConfig = {
 
 export const store = configureStore({
   reducer: {
-    // cars: persistReducer(carsConfig, carsReducer),
     cars: carsReducer,
-
     favorite: persistReducer(favoritConfig, favoritSlice.reducer),
-
     // filter: filterReducer,
   },
 
@@ -43,6 +35,6 @@ export const store = configureStore({
       },
     }),
 });
-// console.log(store.cars)
+
 // створюємо persistor для нашого store
 export const persistor = persistStore(store);

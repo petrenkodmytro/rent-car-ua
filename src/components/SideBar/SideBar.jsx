@@ -3,7 +3,7 @@ import { FcHome } from 'react-icons/fc';
 import { IoIosCar } from 'react-icons/io';
 import { MdFavorite } from 'react-icons/md';
 import { TiContacts } from 'react-icons/ti';
-import  {img}  from '../../images';
+import { img } from '../../images';
 import {
   Author,
   Image,

@@ -15,22 +15,21 @@ const rejectedReduser = (state, action) => {
   state.isLoading = false;
   state.error = action.payload;
 };
-const fetchCarsFulfilledReduser = (state, action) => {
+const fetchAllCarsFulfilledReduser = (state, action) => {
   state.isLoading = false;
   state.error = null;
   state.items = action.payload;
 };
 
-const carsSlice = createSlice({
-  name: 'cars',
+const filterSlice = createSlice({
+  name: 'filter',
   initialState,
 
-  // функціональна форма
   extraReducers: builder =>
     builder
       .addCase(fetchAllCars.pending, pendingReduser)
-      .addCase(fetchAllCars.fulfilled, fetchCarsFulfilledReduser)
+      .addCase(fetchAllCars.fulfilled, fetchAllCarsFulfilledReduser)
       .addCase(fetchAllCars.rejected, rejectedReduser),
 });
 
-export const carsReducer = carsSlice.reducer;
+export const filterReducer = filterSlice.reducer;

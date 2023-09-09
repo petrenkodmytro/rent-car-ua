@@ -2,33 +2,51 @@ import { CarsList } from 'components/CarsList/CarsList';
 import Filter from 'components/Filter/Filter';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCars, fetchCarsPagination } from 'redux/operations';
+import { fetchAllCars } from 'redux/operations';
 import { selectCars } from 'redux/selectors';
-// const cardsPerPage = 8;
+import { BtnLoadMore } from './Fleet.styled';
 
 const Fleet = () => {
-  const [pageNumber, setPageNumber] = useState(1);
-  // const [totalPage, setTotalPage] = useState(null);
-  const cars = useSelector(selectCars);
-  console.log(cars);
-  // const totalPages = Math.ceil(cars.length / cardsPerPage);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchAllCars());
+  }, [dispatch]);
+
+  const [pageNumber, setPageNumber] = useState(1);
+
+  const cars = useSelector(selectCars);
+  const carsPerPage = 8;
+  const totalPages = Math.ceil(cars.length / carsPerPage);
+
+  const lastCar = pageNumber * carsPerPage;
+  const visibleCars = cars.slice(0, lastCar);
 
   const onLoadMore = () => {
     setPageNumber(prev => prev + 1);
   };
-  // console.log(cars);
 
-  useEffect(() => {
-    dispatch(fetchCarsPagination(pageNumber));
-  }, [dispatch, pageNumber]);
+  const [filteredCars, setFilteredCars] = useState([]);
+  // // console.log(make);
+  // const search = (e, make) => {
+  //   // e.preventDefault();
+  //    console.log(make);
+  //   if (make !== '') {
+  //     setFilteredCars(cars.filter(car => car.make === make));
+  //   }
+
+  // };
+  console.log(filteredCars);
 
   return (
     <>
-      {/* <Filter /> */}
-      <CarsList cars={cars} />
-
-      <button onClick={onLoadMore}>Load more</button>
+      <Filter setFilteredCars={setFilteredCars} cars={cars} />
+      <CarsList cars={filteredCars.length > 0 ? filteredCars : visibleCars} />
+      {totalPages > pageNumber && filteredCars.length === 0 && (
+        <BtnLoadMore type="button" onClick={onLoadMore}>
+          Load more
+        </BtnLoadMore>
+      )}
     </>
   );
 };
