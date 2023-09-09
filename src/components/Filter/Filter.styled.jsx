@@ -33,7 +33,7 @@ export const Input = styled.input`
   font-size: 18px;
   font-weight: 500;
   /* line-height: 20px; */
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px; */
 
   &::placeholder {
     color: #121417;
@@ -69,19 +69,19 @@ export const MileageInputFrom = styled.input`
   font-size: 18px;
   font-weight: 500;
   line-height: 20px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px; */
 
   &::placeholder {
     color: #121417;
   }
-  @media (min-width: 768px) {
+  /* @media (min-width: 768px) {
     width: 130px;
     padding: 12px 12px 12px 18px;
   }
   @media (min-width: 1440px) {
     width: 160px;
     padding: 14px 14px 14px 18px;
-  }
+  } */
 `;
 
 export const MileageInputTo = styled.input`
@@ -100,19 +100,19 @@ export const MileageInputTo = styled.input`
   font-size: 18px;
   font-weight: 500;
   line-height: 20px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px; */
 
   &::placeholder {
     color: #121417;
   }
-  @media (min-width: 768px) {
+  /* @media (min-width: 768px) {
     width: 130px;
     padding: 12px 12px 12px 18px;
   }
   @media (min-width: 1440px) {
     width: 160px;
     padding: 14px 14px 14px 18px;
-  }
+  } */
 `;
 
 
