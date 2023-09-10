@@ -27,16 +27,6 @@ const Fleet = () => {
   };
 
   const [filteredCars, setFilteredCars] = useState([]);
-  // // console.log(make);
-  // const search = (e, make) => {
-  //   // e.preventDefault();
-  //    console.log(make);
-  //   if (make !== '') {
-  //     setFilteredCars(cars.filter(car => car.make === make));
-  //   }
-
-  // };
-  console.log(filteredCars);
 
   return (
     <>

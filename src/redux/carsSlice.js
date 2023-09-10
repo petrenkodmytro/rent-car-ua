@@ -25,7 +25,6 @@ const carsSlice = createSlice({
   name: 'cars',
   initialState,
 
-  // функціональна форма
   extraReducers: builder =>
     builder
       .addCase(fetchAllCars.pending, pendingReduser)

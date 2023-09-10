@@ -6,23 +6,20 @@ export const Overlay = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: ${p => p.theme.colors.secondColor};
   backdrop-filter: blur(3px);
   z-index: 1200;
-  overflow-x: hidden;
 `;
 
 export const ModalDiv = styled.div`
-  overflow: auto;
+  overflow-y: scroll;
   width: 360px;
+  max-height: 95vh;
   padding: 40px 20px;
   position: absolute;
   top: 50%;
   left: 50%;
-  overflow: hidden;
+
   transform: translate(-50%, -50%);
   border-radius: 24px;
   background-color: ${p => p.theme.colors.whiteColor};
@@ -30,7 +27,6 @@ export const ModalDiv = styled.div`
   @media screen and (min-width: 768px) {
     width: 541px;
     padding: 40px;
-    top: 50%;
   }
 `;
 

@@ -2,8 +2,9 @@ import { lazy } from 'react';
 import { GlobalStyle } from './GlobalStyle';
 import { Route, Routes } from 'react-router-dom';
 import { SharedLayout } from './SharedLayout/SharedLayout';
+import Home from 'pages/Home';
 
-const Home = lazy(() => import('../pages/Home'));
+
 const Fleet = lazy(() => import('../pages/Fleet'));
 const Favorites = lazy(() => import('../pages/Favorites'));
 const Contacts = lazy(() => import('../pages/Contacts'));

@@ -15,6 +15,9 @@ export const fetchAllCars = createAsyncThunk(
   }
 );
 
+
+// fetch with pagination
+
 // export const fetchCarsPagination = createAsyncThunk(
 //   'cars/fetchPagination',
 //   async (pageNumber, thunkAPI) => {
