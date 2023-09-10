@@ -30,3 +30,6 @@ Join RentCarUA Today:
 Don't miss out on the convenience and savings RentCarUA has to offer. Join our community of satisfied travelers and start your journey today. Whether you're planning a short road trip or an extended adventure, we're here to make your car rental experience exceptional.
 
 Choose RentCarUA, where every road leads to adventure!
+
+![main](main-page.png)
+![flit](fllet-page.png)
