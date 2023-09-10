@@ -12,12 +12,23 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  width: 500px;
   display: flex;
-  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
   gap: 20px;
   border: 2px #ccc solid;
   border-radius: 10px;
+  font-size: 10px;
+  @media screen and (min-width: 425px) {
+    padding: 20px;
+    font-size: 14px;
+  }
+  @media screen and (min-width: 767px) {
+    width: 500px;
+    flex-direction: row;
+    font-size: 14px;
+  }
 `;
 
 export const ListInfo = styled.ul`
@@ -28,12 +39,14 @@ export const ListInfo = styled.ul`
   padding-bottom: 15px;
   & > li {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    @media screen and (min-width: 767px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
     & > span,
     & > a {
-      /* color: ${p => p.theme.colors.mainColor}; */
       display: inline-block;
-
     }
   }
 `;

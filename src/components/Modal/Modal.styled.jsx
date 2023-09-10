@@ -16,9 +16,9 @@ export const Overlay = styled.div`
 `;
 
 export const ModalDiv = styled.div`
-overflow: auto;
-  width: 541px;
-  padding: 40px;
+  overflow: auto;
+  width: 360px;
+  padding: 40px 20px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -27,6 +27,11 @@ overflow: auto;
   border-radius: 24px;
   background-color: ${p => p.theme.colors.whiteColor};
   box-shadow: 0px 4px 57px 0px rgba(17, 17, 17, 0.05);
+  @media screen and (min-width: 768px) {
+    width: 541px;
+    padding: 40px;
+    top: 50%;
+  }
 `;
 
 export const CloseBtn = styled.button`

@@ -64,7 +64,6 @@ const Description = () => {
                 <li>HD videocamera for cars</li>
                 <li>
                   Stocks of additional services for car rental without a deposit
-                  is included into separate stocks
                 </li>
                 <li>Drivers services</li>
               </ul>

@@ -14,6 +14,7 @@ const theme = {
     secondColor: 'rgba(18, 20, 23, 0.50)',
     thirdColor: '#363535',
     bgc: '#F9F9F9',
+    bgSideBar: '#dbf6f8de;',
     accentLight: '#3470FF',
     accentDark: '#0B44CD',
     error: '#720017',

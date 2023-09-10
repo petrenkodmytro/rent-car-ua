@@ -3,9 +3,7 @@ import styled from 'styled-components';
 export const CarInfo = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 8px;
   color: ${p => p.theme.colors.secondColor};
-  /* font-family: Manrope; */
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
@@ -13,8 +11,8 @@ export const CarInfo = styled.div`
 
 export const Title = styled.p`
   display: flex;
-  /* align-items: flex-start; */
   margin-top: 14px;
+  margin-bottom: 8px;
   color: ${p => p.theme.colors.mainColor};
   font-size: 16px;
   font-weight: 500;
@@ -37,6 +35,7 @@ export const Descriprion = styled.p`
   font-weight: 400;
   line-height: 1.43;
   margin-bottom: 24px;
+  margin-top: 14px;
 `;
 
 export const InfoWrap = styled.div`
@@ -55,6 +54,7 @@ export const InfoTitle = styled.p`
   font-size: 14px;
   font-weight: 500;
   line-height: 1.43;
+  margin-bottom: 8px;
 `;
 
 export const RentalList = styled.ul`
@@ -96,11 +96,8 @@ export const Delimeter = styled.span`
 `;
 
 export const LinkOrder = styled.a`
-  /* display: flex; */
   margin-top: 24px;
   padding: 12px 50px;
-  /* justify-content: center; */
-  /* align-items: center; */
   border-radius: 12px;
   border: none;
   background-color: ${p => p.theme.colors.accentLight};
@@ -115,7 +112,7 @@ export const LinkOrder = styled.a`
   &:hover,
   &:focus {
     background-color: ${p => p.theme.colors.accentDark};
-    box-shadow: -2px -2px 5px #fff,
+    box-shadow: -2px -2px 5px ${p => p.theme.colors.whiteColor},
       2px 2px 5px ${p => p.theme.colors.accentDark};
   }
 `;

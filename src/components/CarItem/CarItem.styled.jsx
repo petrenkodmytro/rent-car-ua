@@ -2,12 +2,14 @@ import styled from 'styled-components';
 
 export const CardWrap = styled.div`
   position: relative;
-  width: 274px;
+  width: 220px;
   height: 426px;
   display: flex;
   flex-direction: column;
-  /* gap: 30px; */
-  /* margin-bottom: 20px; */
+  @media screen and (min-width:425px) {
+    width: 274px;
+  }
+
 `;
 
 export const CarInfo = styled.div`
@@ -15,7 +17,6 @@ export const CarInfo = styled.div`
   flex-direction: column;
   gap: 8px;
   color: ${p => p.theme.colors.secondColor};
-  /* font-family: Manrope; */
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
@@ -23,7 +24,6 @@ export const CarInfo = styled.div`
 
 export const Title = styled.p`
   display: flex;
-  /* align-items: flex-start; */
   margin-top: 14px;
   color: ${p => p.theme.colors.mainColor};
   font-size: 16px;
@@ -70,14 +70,13 @@ export const Delimeter = styled.span`
 export const BtnInfo = styled.button`
   display: flex;
   margin-top: auto;
-  padding: 12px 99px;
+  padding: 12px;
   justify-content: center;
   align-items: center;
   border-radius: 12px;
   border: none;
   background-color: ${p => p.theme.colors.accentLight};
   color: ${p => p.theme.colors.whiteColor};
-  transition: background-color 0.25s ease-in-out;
   font-family: Manrope;
   font-size: 14px;
   font-style: normal;
@@ -87,8 +86,11 @@ export const BtnInfo = styled.button`
   &:hover,
   &:focus {
     background-color: ${p => p.theme.colors.accentDark};
-    box-shadow: -2px -2px 5px #fff,
+    box-shadow: -2px -2px 5px ${p => p.theme.colors.whiteColor},
       2px 2px 5px ${p => p.theme.colors.accentDark};
+  }
+  @media screen and (min-width:768px) {
+    padding: 12px 99px;
   }
 `;
 

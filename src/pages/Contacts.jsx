@@ -5,7 +5,7 @@ import { ContactsSection } from './Contact.styled';
 const Contacts = () => {
   return (
     <ContactsSection>
-      <h2 style={{ marginTop: '20px' }}>Contacts</h2>
+      <h2>Contacts</h2>
       <ContactList />
     </ContactsSection>
   );
