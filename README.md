@@ -31,5 +31,6 @@ Don't miss out on the convenience and savings RentCarUA has to offer. Join our c
 
 Choose RentCarUA, where every road leads to adventure!
 
-![main](main-page.png)
-![flit](fllet-page.png)
+![main](./src/images/main-page.png)
+![fleet](./src/images/fleet-page.png)
+![contacts](./src/images/contacts-page.png)

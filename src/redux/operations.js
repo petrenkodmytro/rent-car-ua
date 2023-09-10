@@ -14,24 +14,3 @@ export const fetchAllCars = createAsyncThunk(
     }
   }
 );
-
-
-// fetch with pagination
-
-// export const fetchCarsPagination = createAsyncThunk(
-//   'cars/fetchPagination',
-//   async (pageNumber, thunkAPI) => {
-//     const options = {
-//       params: {
-//         page: pageNumber,
-//         limit: 8,
-//       },
-//     };
-//     try {
-//       const response = await axios.get('/adverts', options);
-//       return response.data;
-//     } catch (error) {
-//       return thunkAPI.rejectWithValue(error.message);
-//     }
-//   }
-// );
