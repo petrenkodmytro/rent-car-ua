@@ -6,10 +6,9 @@ export const CardWrap = styled.div`
   height: 426px;
   display: flex;
   flex-direction: column;
-  @media screen and (min-width:425px) {
+  @media screen and (min-width: 425px) {
     width: 274px;
   }
-
 `;
 
 export const CarInfo = styled.div`
@@ -30,6 +29,19 @@ export const Title = styled.p`
   font-weight: 500;
   line-height: 1.5;
 `;
+
+export const Make = styled.span`
+  white-space: nowrap;
+`;
+
+export const Model = styled.span`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 3px;
+  color: ${p => p.theme.colors.accentLight};
+`;
+
 export const Year = styled.span`
   padding-left: 3px;
 `;
@@ -37,11 +49,6 @@ export const Year = styled.span`
 export const Price = styled.span`
   display: inline-block;
   margin-left: auto;
-`;
-
-export const Model = styled.span`
-  padding-left: 3px;
-  color: ${p => p.theme.colors.accentLight};
 `;
 
 export const InfoWrap = styled.div`
@@ -89,7 +96,7 @@ export const BtnInfo = styled.button`
     box-shadow: -2px -2px 5px ${p => p.theme.colors.whiteColor},
       2px 2px 5px ${p => p.theme.colors.accentDark};
   }
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     padding: 12px 99px;
   }
 `;

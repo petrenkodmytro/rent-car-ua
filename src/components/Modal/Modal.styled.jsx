@@ -12,7 +12,7 @@ export const Overlay = styled.div`
 `;
 
 export const ModalDiv = styled.div`
-  overflow-y: scroll;
+  overflow-y: auto;
   width: 360px;
   max-height: 95vh;
   padding: 40px 20px;

@@ -10,6 +10,7 @@ import {
   ImgCar,
   ImgWrap,
   InfoWrap,
+  Make,
   Model,
   Price,
   Title,
@@ -69,19 +70,20 @@ const CarItem = ({ item }) => {
           <FavoritesBtn
             onClick={isFavorite ? removeFavorite : addFavorite}
             type="button"
-          >{isFavorite ? <FavoriteIconTrue width={18} height={18}>
-          <use href={icon + '#icon-normal'}></use>
-        </FavoriteIconTrue> : <FavoriteIconFalse width={18} height={18}>
-          <use href={icon + '#icon-normal'}></use>
-        </FavoriteIconFalse>}
-            
+          >
+            {isFavorite ? (
+              <FavoriteIconTrue width={18} height={18}>
+                <use href={icon + '#icon-normal'}></use>
+              </FavoriteIconTrue>
+            ) : (
+              <FavoriteIconFalse width={18} height={18}>
+                <use href={icon + '#icon-normal'}></use>
+              </FavoriteIconFalse>
+            )}
           </FavoritesBtn>
           <Title>
-            {make ?? 'Unknown'}
-            <Model>
-              {(model.length > 12 ? model.slice(0, 12) : model) ?? 'Unknown'}
-            </Model>
-            ,<Year>{year ?? 'Unknown'}</Year>
+            <Make>{make ?? 'Unknown'}</Make>
+            <Model>{model ?? 'Unknown'}</Model>,<Year>{year ?? 'Unknown'}</Year>
             <Price>{rentalPrice ?? 'Unknown'}</Price>
           </Title>
 
