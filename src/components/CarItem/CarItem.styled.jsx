@@ -6,7 +6,7 @@ export const CardWrap = styled.div`
   height: 426px;
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: 425px) {
+  @media screen and (min-width: 768px) {
     width: 274px;
   }
 `;

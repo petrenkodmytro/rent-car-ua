@@ -9,6 +9,7 @@ export const Overlay = styled.div`
   background-color: ${p => p.theme.colors.secondColor};
   backdrop-filter: blur(3px);
   z-index: 1200;
+  overflow: hidden;
 `;
 
 export const ModalDiv = styled.div`

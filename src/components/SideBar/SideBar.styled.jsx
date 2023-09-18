@@ -6,16 +6,23 @@ export const NavBar = styled.aside`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-width: 150px;
   background-color: ${p => p.theme.colors.bgSideBar};
+
+  @media screen and (min-width: 768px) {
+    
+  }
 `;
 
 export const NavWrapper = styled.nav`
   display: flex;
+   min-width: 150px;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   gap: 25px;
+  /* @media screen and (min-width: 768px) {
+    width: 374px;
+  } */
 `;
 
 export const StyledNavLink = styled(NavLink)`

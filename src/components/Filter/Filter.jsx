@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import DatalistInput, { useComboboxControls } from 'react-datalist-input';
+
 import {
   BtnForm,
   Form,
@@ -23,6 +25,8 @@ const optionsToast = {
 
 const Filter = ({ cars, setFilteredCars }) => {
   const carsMakeArr = cars.map(car => car.make);
+  const testArr = cars.map(car => ({value:car.make, id:car.id}));
+console.log(testArr);
   const maxPrice = Math.max(
     ...cars
       .map(car => car.rentalPrice)
@@ -83,9 +87,21 @@ const Filter = ({ cars, setFilteredCars }) => {
     setMileageTo('');
   };
 
+  
+  const { setValue, value } = useComboboxControls({ initialValue: '' });
   return (
     <Form>
-      <Label htmlFor="make">
+<DatalistInput
+      value={value}
+      setValue={setValue}
+      // label="Select ice cream flavor"
+      showLabel={false}
+      items={testArr}
+      onSelect={(item) => {
+        setValue(''); // Custom behavior: Clear input field once a value has been selected
+      }}
+    />
+      {/* <Label htmlFor="make">
         Car brand
         <Input
           id="make"
@@ -94,7 +110,7 @@ const Filter = ({ cars, setFilteredCars }) => {
           onChange={event => setMake(event.target.value)}
           placeholder="Enter the text"
         />
-      </Label>
+      </Label> */}
       <datalist id="dataMake">
         {[...new Set(carsMakeArr)].map((item, key) => (
           <option key={key} value={item} />
