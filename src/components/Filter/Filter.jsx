@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import DatalistInput, { useComboboxControls } from 'react-datalist-input';
+import DatalistInput from 'react-datalist-input';
 
 import {
   BtnForm,
   Form,
-  Input,
   Label,
   MileageInputFrom,
   MileageInputTo,
@@ -25,25 +24,33 @@ const optionsToast = {
 
 const Filter = ({ cars, setFilteredCars }) => {
   const carsMakeArr = cars.map(car => car.make);
-  const testArr = cars.map(car => ({value:car.make, id:car.id}));
-console.log(testArr);
+  const makeValues = [...new Set(carsMakeArr)].map((item, key) => ({
+    value: item,
+    id: key,
+  }));
+
   const maxPrice = Math.max(
     ...cars
       .map(car => car.rentalPrice)
       .map(item => item.slice(1))
       .map(item => Number(item))
   );
+
   const priceArr = [];
   for (let i = 0; i <= maxPrice; i += 10) {
     priceArr.push(i);
   }
+  const priceValues = priceArr.map((item, key) => ({
+    value: String(item),
+    id: key,
+  }));
 
   const [make, setMake] = useState('');
   const [price, setPrice] = useState('');
   const [mileageFrom, setMileageFrom] = useState('');
   const [mileageTo, setMileageTo] = useState('');
 
-  const search = e => {
+  const search = () => {
     let filterCars = [...cars];
 
     if (make === '' && price === '' && mileageFrom === '' && mileageTo === '') {
@@ -87,52 +94,27 @@ console.log(testArr);
     setMileageTo('');
   };
 
-  
-  const { setValue, value } = useComboboxControls({ initialValue: '' });
   return (
     <Form>
-<DatalistInput
-      value={value}
-      setValue={setValue}
-      // label="Select ice cream flavor"
-      showLabel={false}
-      items={testArr}
-      onSelect={(item) => {
-        setValue(''); // Custom behavior: Clear input field once a value has been selected
-      }}
-    />
-      {/* <Label htmlFor="make">
-        Car brand
-        <Input
-          id="make"
-          type="text"
-          list="dataMake"
-          onChange={event => setMake(event.target.value)}
-          placeholder="Enter the text"
-        />
-      </Label> */}
-      <datalist id="dataMake">
-        {[...new Set(carsMakeArr)].map((item, key) => (
-          <option key={key} value={item} />
-        ))}
-      </datalist>
+      <DatalistInput
+        placeholder="Enter the text"
+        value={make}
+        setValue={setMake}
+        label="Car brand"
+        showLabel={true}
+        items={makeValues}
+      />
 
-      <Label htmlFor="price">
-        Price/ 1 hour
-        <Input
-          style={{ width: '125px' }}
-          id="price"
-          type="text"
-          list="data"
-          onChange={event => setPrice(event.target.value)}
-          placeholder="To $"
-        />
-      </Label>
-      <datalist id="data">
-        {priceArr.map((item, key) => (
-          <option key={key} value={item} />
-        ))}
-      </datalist>
+      <DatalistInput
+        placeholder="To $"
+        value={price}
+        setValue={setPrice}
+        label="Price/ 1 hour"
+        showLabel={true}
+        items={priceValues}
+        style={{ width: '125px' }}
+      />
+
       <MileageWrap>
         <Label htmlFor="mileageFrom">
           Сar mileage / km
@@ -151,7 +133,6 @@ console.log(testArr);
           placeholder="To"
         />
       </MileageWrap>
-
       <BtnForm type="button" onClick={search}>
         Search
       </BtnForm>
@@ -163,3 +144,19 @@ console.log(testArr);
 };
 
 export default Filter;
+
+//  {/* <Label htmlFor="make">
+//       Car brand
+//       <Input
+//         id="make"
+//         type="text"
+//         list="dataMake"
+//         onChange={event => setMake(event.target.value)}
+//         placeholder="Enter the text"
+//       />
+//     </Label> */}
+//     {/* <datalist id="dataMake">
+//       {[...new Set(carsMakeArr)].map((item, key) => (
+//         <option key={key} value={item} />
+//       ))}
+//     </datalist> */}

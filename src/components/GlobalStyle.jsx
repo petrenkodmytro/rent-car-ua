@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
 import 'react-toastify/dist/ReactToastify.css';
+import 'react-datalist-input/dist/styles.css';
 
 export const GlobalStyle = createGlobalStyle`
 

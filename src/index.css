@@ -1,3 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+.react-datalist-input__container > * {
+  box-sizing: border-box;
+}
+
+.react-datalist-input__container {
+  width: 200px;
+  border: none;
+  outline: none;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.react-datalist-input__textbox {
+  width: 100%;
+  padding: 10px 18px;
+  border-radius: 14px;
+  background: #f7f7fb;
+  border: none;
+  outline: none;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: -2px -2px 5px #f7f7fb, 2px 2px 5px #0b44cd;
+
+  &::placeholder {
+    color: #121417;
+  }
+
+  @media (min-width: 768px) {
+    padding: 12px 12px 12px 18px;
+  }
+  @media (min-width: 1440px) {
+    padding: 14px 14px 14px 18px;
+  }
+}
+
+.react-datalist-input__listbox {
+  width: 100%;
+  position: absolute;
+  margin: 2px 0 0 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  z-index: 10;
+}
+
+.react-datalist-input__label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #8a8a89;
+}
+
+mark {
+  background-color: transparent;
+}

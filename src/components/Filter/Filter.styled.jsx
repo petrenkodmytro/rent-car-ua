@@ -47,7 +47,7 @@ export const Input = styled.input`
 `;
 
 export const MileageWrap = styled.div`
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: center;
   align-items: flex-end;
