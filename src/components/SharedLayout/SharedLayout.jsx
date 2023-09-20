@@ -1,11 +1,6 @@
 import React, { Suspense, useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import {
-  Main,
-  MobileWrapper,
-  TabletWrapper,
-  Wrapper,
-} from './SharedLayout.styled';
+import { Main, Wrapper } from './SharedLayout.styled';
 import SideBar from 'components/SideBar/SideBar';
 import ScrollToTop from 'react-scroll-to-top';
 import { Loading } from 'notiflix';
