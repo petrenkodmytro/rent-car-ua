@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 export const CardWrap = styled.div`
   position: relative;
-  width: 220px;
+  width: 274px;
   height: 426px;
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: 768px) {
+  /* @media screen and (min-width: 768px) {
     width: 274px;
-  }
+  } */
 `;
 
 export const CarInfo = styled.div`

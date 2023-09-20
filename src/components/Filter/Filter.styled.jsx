@@ -56,7 +56,7 @@ export const MileageWrap = styled.div`
 export const MileageInputFrom = styled.input`
   display: flex;
   width: 100px;
-  padding: 10px 10px 10px 14px;
+  padding: 8px;
   justify-content: center;
   align-items: center;
   gap: 32px;
@@ -88,7 +88,7 @@ export const MileageInputFrom = styled.input`
 export const MileageInputTo = styled.input`
   display: flex;
   width: 100px;
-  padding: 10px 10px 10px 14px;
+  padding: 8px;
   justify-content: center;
   align-items: center;
   gap: 32px;

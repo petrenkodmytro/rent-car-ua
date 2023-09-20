@@ -133,6 +133,7 @@ const Filter = ({ cars, setFilteredCars }) => {
           placeholder="To"
         />
       </MileageWrap>
+
       <BtnForm type="button" onClick={search}>
         Search
       </BtnForm>

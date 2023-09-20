@@ -2,15 +2,23 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const NavBar = styled.aside`
-  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: -10%;
+  bottom: 0;
+  /* transform: translateX(0) */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* display: none; */
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background-color: ${p => p.theme.colors.bgSideBar};
-
+/* 
   @media screen and (min-width: 768px) {
     display: flex;
-  }
+  } */
 `;
 
 export const NavWrapper = styled.nav`
