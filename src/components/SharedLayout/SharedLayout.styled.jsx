@@ -29,7 +29,3 @@ top: 0;
 bottom: 0;
 `;
 
-export const TabletWrapper = styled.div`
-/* min-height: 100vh; */
-  
-`;

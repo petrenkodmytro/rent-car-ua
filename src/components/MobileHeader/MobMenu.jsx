@@ -13,9 +13,9 @@ import {
   NavBar,
 } from './MobMenu.styled';
 
-const MobMenu = ({ isMobMenuOpen }) => {
+const MobMenu = () => {
   return (
-    <NavBar style={isMobMenuOpen && { left: '0', display: 'flex' }}>
+    <NavBar>
       <NavWrapper>
         <Title>RentCarUA</Title>
         <Image src={img.logo} alt="Logo" />

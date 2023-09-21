@@ -16,11 +16,12 @@ export const SharedLayout = () => {
   const toggle = () => {
     setIsMobMenuOpen(!isMobMenuOpen);
   };
-  console.log(isMobMenuOpen);
+
   return (
     <Wrapper>
-      <MobileHeader onOpen={toggle} />
-      {isMobMenuOpen ? <MobMenu isMobMenuOpen={isMobMenuOpen} /> : <SideBar />}
+      <MobileHeader isMobMenuOpen={isMobMenuOpen} onOpen={toggle} />
+      {isMobMenuOpen && <MobMenu />}
+      <SideBar />
       <Main>
         <Suspense fallback={isLoading ? Loading.arrows() : Loading.remove()}>
           <Outlet />

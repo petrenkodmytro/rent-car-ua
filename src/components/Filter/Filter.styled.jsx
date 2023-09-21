@@ -125,7 +125,6 @@ export const BtnForm = styled.button`
   border: none;
   background-color: ${p => p.theme.colors.accentLight};
   color: ${p => p.theme.colors.whiteColor};
-  transition: background-color 0.25s ease-in-out;
   font-family: Manrope;
   font-size: 14px;
   font-style: normal;

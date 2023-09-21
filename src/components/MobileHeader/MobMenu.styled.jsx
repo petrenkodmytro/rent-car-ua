@@ -5,32 +5,24 @@ export const NavBar = styled.aside`
   position: absolute;
   z-index: 10;
   top: 0;
-  left: -10%;
+  left: 0;
   bottom: 0;
-  /* transform: translateX(0) */
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: left 1s cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* display: none; */
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: ${p => p.theme.colors.bgSideBar};
-/* 
-  @media screen and (min-width: 768px) {
-    display: flex;
-  } */
+  background-color: #b3dff5;
 `;
 
 export const NavWrapper = styled.nav`
   display: flex;
-  width: 150px;
+  width: 200px;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   gap: 25px;
-  /* @media screen and (min-width: 768px) {
-    width: 150px;
-  } */
 `;
 
 export const StyledNavLink = styled(NavLink)`
@@ -83,3 +75,4 @@ export const Author = styled.p`
   text-shadow: -2px -2px 5px ${p => p.theme.colors.whiteColor},
     2px 2px 5px ${p => p.theme.colors.accentDark};
 `;
+ 
